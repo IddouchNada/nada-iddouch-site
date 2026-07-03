@@ -58,7 +58,7 @@ img { max-width: 100%; height: auto; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) 410px; gap: 52px; align-items: center; }
 .eyebrow { margin: 0 0 14px; color: var(--accent); text-transform: uppercase; letter-spacing: .14em; font-weight: 800; font-size: .78rem; }
 h1, h2, h3 { font-family: var(--font-display); line-height: 1.05; letter-spacing: -.055em; margin: 0; }
-h1 { font-size: clamp(3rem, 7vw, 6.7rem); max-width: 300px; }
+h1 { font-size: clamp(3rem, 7vw, 6.7rem); max-width: 10px; }
 h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
 h3 { font-size: 1.25rem; letter-spacing: -.035em; }
 .lead { color: var(--muted); font-size: clamp(1.1rem, 1.8vw, 1.36rem); max-width: 760px; margin: 24px 0 0; }
