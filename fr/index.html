@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nada Iddouch · Site personnel, projets et journal</title>
-    <meta name="description" content="Site personnel de Nada Iddouch : e-commerce, exploitation de site, SEO international, performance digitale, CRM et automatisation.">
+    <title>Nada Iddouch · E-commerce, SEO et performance digitale</title>
+    <meta name="description" content="Site personnel de Nada Iddouch : e-commerce, SEO international, performance digitale, automatisation IA et projets de croissance.">
     <link rel="canonical" href="https://nadaiddouch.example/fr/">
     <link rel="alternate" hreflang="en" href="https://nadaiddouch.example/">
     <link rel="alternate" hreflang="fr" href="https://nadaiddouch.example/fr/">
@@ -13,8 +13,8 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Nada Iddouch">
-    <meta property="og:title" content="Nada Iddouch · Site personnel, projets et journal">
-    <meta property="og:description" content="Site personnel de Nada Iddouch : e-commerce, SEO international, performance digitale, CRM et automatisation.">
+    <meta property="og:title" content="Nada Iddouch · E-commerce, SEO et performance digitale">
+    <meta property="og:description" content="Responsable e-commerce et performance digitale, spécialisée en SEO, automatisation IA, coordination de projets et croissance e-commerce.">
     <meta property="og:url" content="https://nadaiddouch.example/fr/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
@@ -31,6 +31,86 @@
       ]
     }
     </script>
+    <style>
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-photo-shell {
+            width: min(320px, 72vw);
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            overflow: hidden;
+            background: linear-gradient(145deg, rgba(1,105,111,.14), rgba(1,105,111,.04));
+            border: 1px solid rgba(1,105,111,.16);
+            box-shadow: 0 16px 40px rgba(0,0,0,.08);
+        }
+        .profile-photo-shell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-grid--with-photo {
+            align-items: center;
+            gap: 2rem;
+        }
+        .home-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .highlight-card {
+            padding: 1.1rem 1rem;
+            border-radius: 16px;
+            background: rgba(255,255,255,.66);
+            border: 1px solid rgba(0,0,0,.06);
+        }
+        .highlight-card strong {
+            display: block;
+            margin-bottom: .35rem;
+        }
+        .project-list.compact-list {
+            display: grid;
+            gap: 1rem;
+        }
+        .project-list.compact-list a {
+            display: block;
+            padding: 1.1rem 1.1rem;
+            border-radius: 16px;
+            text-decoration: none;
+            background: rgba(255,255,255,.72);
+            border: 1px solid rgba(0,0,0,.06);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .project-list.compact-list a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(0,0,0,.08);
+        }
+        .project-list.compact-list strong {
+            display: block;
+            margin-bottom: .35rem;
+        }
+        .project-list.compact-list span {
+            display: block;
+            line-height: 1.6;
+        }
+        .editorial-note {
+            max-width: 64ch;
+        }
+        @media (max-width: 900px) {
+            .hero-grid--with-photo {
+                grid-template-columns: 1fr;
+            }
+            .hero-visual {
+                order: -1;
+            }
+            .profile-photo-shell {
+                width: min(250px, 62vw);
+            }
+        }
+    </style>
 </head>
 <body>
     <a class="skip-link" href="#main">Aller au contenu</a>
@@ -53,28 +133,38 @@
             </div>
         </div>
     </header>
+
     <main id="main">
         <section class="hero-section section-xl">
-            <div class="container hero-grid">
+            <div class="container hero-grid hero-grid--with-photo">
                 <div class="hero-copy reveal">
                     <p class="eyebrow">Site personnel · Portfolio · Journal</p>
-                    <h1>Nada Iddouch, l’exploitation e-commerce au service de la performance, du contenu et de la croissance digitale.</h1>
-                    <p class="lead">Je pilote et optimise des environnements e-commerce à la croisée du business, de l’exécution opérationnelle et de la performance digitale : gestion de contenu, SEO, merchandising, coordination technique, analyse de trafic et automatisation. Ce site présente mon parcours, mes projets et les sujets sur lesquels je veux être identifiée : efficacité opérationnelle, rentabilité et croissance durable.</p>
+                    <h1>Nada Iddouch, entre e-commerce, SEO, performance digitale et automatisation par l’intelligence artificielle.</h1>
+                    <p class="lead">Je pilote la croissance e-commerce avec une approche à la fois stratégique et opérationnelle. J’aime améliorer ce qui existe déjà, structurer ce qui manque, faire parler les données et automatiser intelligemment ce qui peut l’être, en particulier lorsqu’il s’agit de créer des agents capables de détecter des insights utiles à partir de la data accumulée au fil du temps.</p>
+                    <p class="lead editorial-note">Au quotidien, je travaille à la croisée du contenu, de l’acquisition, de l’analyse de performance, de l’UX, du SEO et de la coordination de projets. Ce que je recherche avant tout, ce sont des résultats concrets, des idées applicables et des leviers capables de faire progresser un site de façon durable face à une concurrence toujours plus exigeante.</p>
                     <div class="hero-actions">
                         <a class="button" href="projets.html">Voir les projets</a>
                         <a class="button button-ghost" href="a-propos.html">Lire le parcours</a>
                     </div>
                 </div>
-                <aside class="hero-card reveal" aria-label="Résumé du profil">
-                    <div class="status-dot"></div>
-                    <h2>Positionnement</h2>
-                    <p>Responsable E-commerce & Performance Digitale, j’allie gestion opérationnelle de site, optimisation du contenu, analyse de performance et coordination de projets pour améliorer l’expérience client et les résultats commerciaux.</p>
-                    <dl class="metric-list">
-                        <div><dt>Expertise</dt><dd>E-commerce, SEO, CRM & performance</dd></div>
-                        <div><dt>Localisation</dt><dd>Lille, France</dd></div>
-                        <div><dt>Langues</dt><dd>Français · Anglais</dd></div>
-                    </dl>
+                <aside class="hero-visual reveal" aria-label="Photo de Nada Iddouch">
+                    <div class="profile-photo-shell">
+                        <img src="../assets/img/nada-photo.jpg" alt="Portrait de Nada Iddouch" loading="lazy">
+                    </div>
                 </aside>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p class="eyebrow">Repères</p>
+                <h2>Quelques résultats qui résument ma manière de travailler.</h2>
+                <div class="home-highlights">
+                    <article class="highlight-card"><strong>355k€ → 540k€</strong><span>Chiffre d’affaires e-commerce après refonte du site.</span></article>
+                    <article class="highlight-card"><strong>+52%</strong><span>Croissance du chiffre d’affaires sur trois ans.</span></article>
+                    <article class="highlight-card"><strong>500%+</strong><span>ROAS sur les campagnes Google Ads Search et Shopping.</span></article>
+                    <article class="highlight-card"><strong>-65%</strong><span>Réduction des coûts de production de contenu grâce à l’IA.</span></article>
+                </div>
             </div>
         </section>
 
@@ -82,15 +172,15 @@
             <div class="container split-section">
                 <div>
                     <p class="eyebrow">Projets clés</p>
-                    <h2>Projets e-commerce, SEO et automatisation sélectionnés.</h2>
-                    <p>Voici les projets les plus représentatifs de mon approche : pilotage opérationnel, performance business, structuration SEO et amélioration continue.</p>
+                    <h2>Des projets pensés pour faire progresser la performance, la visibilité et l’exécution.</h2>
+                    <p>Chaque projet présenté ici raconte une logique de terrain : identifier un problème, comprendre les données, tester des solutions réalistes, coordonner les bons interlocuteurs et faire évoluer l’existant avec méthode.</p>
                     <a class="text-link" href="projets.html">Voir tous les projets</a>
                 </div>
                 <div class="project-list compact-list">
-                    <a href="projets.html#projet-un"><strong>Refonte du site PrestaShop</strong><span>UX, SEO et architecture — CA passé de 355k€ à 540k€.</span></a>
-                    <a href="projets.html#projet-deux"><strong>Transformation digitale & pilotage financier (Lyreco)</strong><span>Suivi budgétaire et structuration ROI de projets digitaux internationaux.</span></a>
-                    <a href="projets.html#projet-trois"><strong>Automatisation marketing avec Python & IA</strong><span>Scripts et workflows IA pour industrialiser la production de contenus.</span></a>
-                    <a href="projets.html#projet-quatre"><strong>Projet SEO international</strong><span>Déploiement de recommandations SEO sur plusieurs marchés, structuration du contenu multilingue et amélioration de la visibilité organique.</span></a>
+                    <a href="projets.html#projet-un"><strong>Refonte du site PrestaShop</strong><span>Refonte UX, SEO et architecture du site e-commerce, avec amélioration du parcours utilisateur, de la structure des pages et de la performance commerciale.</span></a>
+                    <a href="projets.html#projet-deux"><strong>Transformation digitale & pilotage financier</strong><span>Suivi budgétaire, structuration ROI et accompagnement de projets digitaux internationaux dans un environnement exigeant et multi-interlocuteurs.</span></a>
+                    <a href="projets.html#projet-trois"><strong>Automatisation marketing avec Python, N8N & IA</strong><span>Mise en place de scripts, d’agents et de workflows d’automatisation pour accélérer l’analyse, la production et la détection d’opportunités à partir de la donnée.</span></a>
+                    <a href="projets.html#projet-quatre"><strong>Projet SEO international</strong><span>Développement de la visibilité organique de la version anglaise du site HD Soudage pour les marchés belge, allemand et italien, avec export automatisé des données Search Console, détection d’opportunités SEO et suivi précis de l’évolution des positions.</span></a>
                 </div>
             </div>
         </section>
@@ -98,12 +188,25 @@
         <section class="section">
             <div class="container split-section">
                 <div>
-                    <p class="eyebrow">Compétences à impact</p>
-                    <h2>Ce que j’apporte sur un site e-commerce.</h2>
+                    <p class="eyebrow">À retenir sur moi</p>
+                    <h2>Un profil autonome, analytique et orienté solutions.</h2>
                 </div>
                 <div>
-                    <p>Mon expérience me permet d’intervenir sur le quotidien d’un site tout en gardant une vision business : mise à jour des contenus, optimisation du parcours, coordination avec les équipes, suivi de la performance et priorisation des actions.</p>
-                    <p>Je travaille avec des outils comme Google Analytics 4, Google Tag Manager, CMS e-commerce, Excel et des solutions d’automatisation pour fiabiliser l’exécution et accélérer les opérations.</p>
+                    <p>Je suis quelqu’un de créatif, persévérant et sérieux, avec une vraie capacité à avancer de manière autonome tout en restant force de proposition. J’aime tester, comparer, ajuster et garder ce qui fonctionne réellement, avec une attention particulière portée aux chiffres, aux signaux faibles et aux informations cachées dans les données.</p>
+                    <p>J’apprécie particulièrement les environnements dans lesquels il faut dépasser la concurrence, s’adapter aux évolutions des algorithmes, structurer les priorités et transformer les idées en actions concrètes. Je travaille en français comme en anglais, et j’interviens avec la même exigence sur l’exécution quotidienne, les sujets de fond et l’amélioration continue.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container split-section">
+                <div>
+                    <p class="eyebrow">Méthode & outils</p>
+                    <h2>Des projets menés avec méthode, coordination et sens du concret.</h2>
+                </div>
+                <div>
+                    <p>Mon approche repose sur la coordination de projets, l’accompagnement de stagiaires et la collaboration avec des experts externes, en gardant toujours une logique d’exécution réaliste et d’amélioration mesurable. J’aime proposer des idées, les adapter aux moyens disponibles et les mettre en place jusqu’au bout.</p>
+                    <p>Je travaille notamment avec GA4, GTM, PrestaShop, Shopify, WooCommerce, Sarbacane, Excel, Canva, la suite Adobe, Python, N8N, SQL, Docker et l’API OpenAI pour suivre la performance, automatiser certaines tâches et faire émerger des opportunités d’optimisation.</p>
                 </div>
             </div>
         </section>
@@ -111,8 +214,8 @@
         <section class="section cta-panel-section">
             <div class="container cta-panel reveal">
                 <p class="eyebrow">Journal</p>
-                <h2>Développer la visibilité avec des articles utiles.</h2>
-                <p>J’utilise le Journal pour publier des notes, cas pratiques, réflexions et apprentissages sur l’e-commerce, le SEO, l’internationalisation et l’automatisation par l’IA. Le site dépasse ainsi le simple profil statique et devient un actif éditorial.</p>
+                <h2>Un espace pour documenter ce que j’apprends et ce que je construis.</h2>
+                <p>J’utilise le Journal pour partager des retours d’expérience, des tests, des analyses et des réflexions autour du SEO, de l’e-commerce, de l’automatisation, de l’international et de la performance digitale. Le site devient ainsi un espace vivant, à la fois personnel, professionnel et évolutif.</p>
                 <a class="button" href="journal.html">Ouvrir le journal</a>
             </div>
         </section>
