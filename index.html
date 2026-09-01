@@ -33,8 +33,8 @@
     </script>
     <style>
         .hero-visual { display: flex; justify-content: center; align-items: center; }
-        .profile-photo-shell { width: min(320px, 72vw); aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; background: linear-gradient(145deg, rgba(52,87,255,.14), rgba(8,182,216,.06)); border: 1px solid var(--line); box-shadow: var(--shadow-card); }
-        .profile-photo-shell img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-photo-shell { width: min(320px, 72vw); aspect-ratio: 1 / 1; border-radius: 50%; background: linear-gradient(145deg, rgba(var(--accent-rgb),.14), rgba(var(--accent-2-rgb),.08)); border: 1px solid var(--line); box-shadow: var(--shadow-card); }
+        .profile-photo-shell img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
         .hero-grid--with-photo { align-items: center; gap: 2rem; }
         @media (max-width: 900px) {
             .hero-grid--with-photo { grid-template-columns: 1fr; }
@@ -59,6 +59,7 @@
                     <a href="career.html">Career</a>
                     <a href="projects.html">Projects</a>
                     <a href="journal.html">Journal</a>
+                    <a href="hobbies.html">Hobbies</a>
                 </nav>
                 <div class="nav-actions">
                     <a class="language-pill" href="fr/" hreflang="fr" lang="fr">FR</a>
@@ -180,6 +181,7 @@
                 <a href="career.html">Career</a>
                 <a href="projects.html">Projects</a>
                 <a href="journal.html">Journal</a>
+                <a href="hobbies.html">Hobbies</a>
             </div>
             <div id="contact">
                 <h2>Contact</h2>

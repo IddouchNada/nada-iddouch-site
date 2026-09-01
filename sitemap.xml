@@ -62,15 +62,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal.html" />
   </url>
   <url>
-    <loc>https://iddouchnada.github.io/nada-iddouch-site/journal/article-template.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/journal/article-template.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal/modele-article.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal/article-template.html" />
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/journal/how-i-use-ai-to-improve-digital-work.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/journal/how-i-use-ai-to-improve-digital-work.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal/how-i-use-ai-to-improve-digital-work.html" />
   </url>
   <url>
-    <loc>https://iddouchnada.github.io/nada-iddouch-site/fr/journal/modele-article.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/journal/article-template.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal/modele-article.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal/article-template.html" />
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/fr/journal/comment-je-me-suis-retrouvee-a-exercer-ce-metier.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/journal.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal/comment-je-me-suis-retrouvee-a-exercer-ce-metier.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal.html" />
+  </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/hobbies.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/hobbies.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/loisirs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/hobbies.html" />
+  </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/fr/loisirs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/hobbies.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/loisirs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/hobbies.html" />
   </url>
 </urlset>
