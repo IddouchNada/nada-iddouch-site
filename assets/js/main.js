@@ -150,6 +150,17 @@ document.querySelectorAll('[data-filter-group]').forEach((group) => {
   });
 });
 
+// Image galleries (hobbies)
+document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+  const track = gallery.querySelector('.gallery-track');
+  const prev = gallery.querySelector('.prev');
+  const next = gallery.querySelector('.next');
+  if (!track) return;
+  const step = () => track.clientWidth * 0.85;
+  prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+  next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+});
+
 // Cursor spotlight on hero
 const spotlightHost = document.querySelector('.hero-section');
 if (spotlightHost && !reduceMotion && window.matchMedia('(hover: hover)').matches) {
