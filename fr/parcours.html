@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Parcours · Nada Iddouch</title>
     <meta name="description" content="Expérience, compétences, trajectoire et réalisations professionnelles de Nada Iddouch en e-commerce, SEO, performance digitale et automatisation.">
-    <link rel="canonical" href="https://your-domain.example/fr/parcours.html">
-    <link rel="alternate" hreflang="en" href="https://your-domain.example/career.html">
-    <link rel="alternate" hreflang="fr" href="https://your-domain.example/fr/parcours.html">
-    <link rel="alternate" hreflang="x-default" href="https://your-domain.example/career.html">
+    <link rel="canonical" href="https://iddouchnada.github.io/nada-iddouch-site/fr/parcours.html">
+    <link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/career.html">
+    <link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/parcours.html">
+    <link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/career.html">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Nada Iddouch">
     <meta property="og:title" content="Parcours · Nada Iddouch">
     <meta property="og:description" content="Expérience, compétences, trajectoire et réalisations professionnelles de Nada Iddouch.">
-    <meta property="og:url" content="https://your-domain.example/fr/parcours.html">
+    <meta property="og:url" content="https://iddouchnada.github.io/nada-iddouch-site/fr/parcours.html">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
+    <div class="scroll-progress"></div>
     <a class="skip-link" href="#main">Aller au contenu</a>
     <header class="site-header">
         <div class="container nav-shell">
@@ -28,16 +29,22 @@
                 <span class="brand-mark">NI</span>
                 <span>Nada Iddouch</span>
             </a>
-            <nav class="main-nav" aria-label="Navigation principale">
-                <a href="index.html">Accueil</a>
-                <a href="a-propos.html">À propos</a>
-                <a href="parcours.html" aria-current="page">Parcours</a>
-                <a href="projets.html">Projets</a>
-                <a href="journal.html">Journal</a>
-            </nav>
-            <div class="nav-actions">
-                <a class="language-pill" href="../career.html" hreflang="en" lang="en">EN</a>
-                <a class="button button-small" href="#contact">Me contacter</a>
+            <div class="nav-collapsible">
+                <nav class="main-nav" aria-label="Navigation principale">
+                    <a href="index.html">Accueil</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="parcours.html" aria-current="page">Parcours</a>
+                    <a href="projets.html">Projets</a>
+                    <a href="journal.html">Journal</a>
+                </nav>
+                <div class="nav-actions">
+                    <a class="language-pill" href="../career.html" hreflang="en" lang="en">EN</a>
+                    <a class="button button-small" href="#contact">Me contacter</a>
+                </div>
+            </div>
+            <div class="header-toggles">
+                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme"></button>
+                <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </header>
@@ -47,6 +54,11 @@
                 <p class="eyebrow">Parcours</p>
                 <h1>Expérience, compétences et trajectoire construites autour de la performance.</h1>
                 <p class="lead">Cette page présente mon parcours professionnel comme une progression cohérente entre gestion, digital, e-commerce, pilotage de projets et automatisation, avec une attention constante portée à l’impact business.</p>
+                <div class="stat-grid">
+                    <article class="stat-card reveal"><span class="stat-number" data-counter="5" data-suffix="+">0</span><span class="stat-label">Années en e-commerce & performance digitale.</span></article>
+                    <article class="stat-card reveal"><span class="stat-number">540k€</span><span class="stat-label">Chiffre d’affaires après la refonte PrestaShop.</span></article>
+                    <article class="stat-card reveal"><span class="stat-number" data-counter="52" data-prefix="+" data-suffix="%">0%</span><span class="stat-label">Croissance du chiffre d’affaires sur trois ans.</span></article>
+                </div>
             </div>
         </section>
 
@@ -76,28 +88,37 @@
                     <p class="eyebrow">Chronologie</p>
                     <h2>Parcours professionnel</h2>
                     <p>Chaque étape de mon parcours m’a permis d’élargir mon champ d’action, depuis les fondamentaux de gestion jusqu’au pilotage de la performance digitale et des projets transverses.</p>
+                    <div class="filter-chips" data-filter-group=".timeline li">
+                        <button type="button" class="filter-chip active" data-filter="all">Tout</button>
+                        <button type="button" class="filter-chip" data-filter="work">Expérience</button>
+                        <button type="button" class="filter-chip" data-filter="education">Formation</button>
+                    </div>
                 </div>
 
                 <ol class="timeline">
-                    <li>
+                    <li data-type="work">
+                        <span class="timeline-type">Expérience</span>
                         <time>2021 – Aujourd’hui</time>
                         <h3>Responsable E-commerce & Performance Digitale · HD Soudage</h3>
                         <p>Je pilote le développement e-commerce d’une activité B2B industrielle avec une responsabilité directe sur la performance commerciale, la visibilité organique, l’acquisition et l’amélioration continue de l’expérience utilisateur. J’ai mené la refonte du site PrestaShop, contribué à faire progresser le chiffre d’affaires de 355k€ à 540k€, structuré le pilotage via GA4, Search Console et Looker Studio, et développé des actions d’automatisation pour améliorer la productivité, la fiabilité des tâches et l’exploitation des données.</p>
                     </li>
 
-                    <li>
+                    <li data-type="work">
+                        <span class="timeline-type">Expérience</span>
                         <time>2018 – 2019</time>
                         <h3>Alternance – Chef de projet digital & contrôle de gestion projets IT · Lyreco</h3>
                         <p>Cette expérience m’a permis de développer une base solide en gestion, reporting et suivi financier de projets digitaux. J’y ai travaillé à l’interface entre finance, IT et métiers, avec une vision concrète des budgets, du pilotage CAPEX/OPEX, de la structuration des données financières et des logiques de transformation à l’échelle internationale.</p>
                     </li>
 
-                    <li>
+                    <li data-type="education">
+                        <span class="timeline-type">Formation</span>
                         <time>2019 – 2021</time>
                         <h3>Master Management & Marketing International · ULCO</h3>
                         <p>Ce cursus a renforcé ma compréhension des enjeux business, marketing et internationaux, et a consolidé une approche orientée analyse, positionnement et développement de projet.</p>
                     </li>
 
-                    <li>
+                    <li data-type="education">
+                        <span class="timeline-type">Formation</span>
                         <time>2015 – 2019</time>
                         <h3>Licence Gestion · IAE Valenciennes & University of Economics in Katowice</h3>
                         <p>Cette formation, complétée par une mobilité Erasmus, a posé les bases de mon approche en gestion, analyse, organisation et compréhension des environnements professionnels structurés.</p>

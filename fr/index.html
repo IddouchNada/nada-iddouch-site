@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nada Iddouch · E-commerce, SEO et performance digitale</title>
     <meta name="description" content="Site personnel de Nada Iddouch : e-commerce, SEO international, performance digitale, automatisation IA et projets de croissance.">
-    <link rel="canonical" href="https://nadaiddouch.example/fr/">
-    <link rel="alternate" hreflang="en" href="https://nadaiddouch.example/">
-    <link rel="alternate" hreflang="fr" href="https://nadaiddouch.example/fr/">
-    <link rel="alternate" hreflang="x-default" href="https://nadaiddouch.example/">
+    <link rel="canonical" href="https://iddouchnada.github.io/nada-iddouch-site/fr/">
+    <link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/">
+    <link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Nada Iddouch">
     <meta property="og:title" content="Nada Iddouch · E-commerce, SEO et performance digitale">
     <meta property="og:description" content="Responsable e-commerce et performance digitale, spécialisée en SEO, automatisation IA, coordination de projets et croissance e-commerce.">
-    <meta property="og:url" content="https://nadaiddouch.example/fr/">
+    <meta property="og:url" content="https://iddouchnada.github.io/nada-iddouch-site/fr/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -24,7 +24,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Nada Iddouch",
-      "url": "https://nadaiddouch.example/fr/",
+      "url": "https://iddouchnada.github.io/nada-iddouch-site/fr/",
       "jobTitle": "Responsable E-commerce, SEO & Performance Digitale",
       "sameAs": [
         "https://www.linkedin.com/in/nada-iddouch/"
@@ -113,6 +113,7 @@
     </style>
 </head>
 <body>
+    <div class="scroll-progress"></div>
     <a class="skip-link" href="#main">Aller au contenu</a>
     <header class="site-header">
         <div class="container nav-shell">
@@ -120,16 +121,22 @@
                 <span class="brand-mark">NI</span>
                 <span>Nada Iddouch</span>
             </a>
-            <nav class="main-nav" aria-label="Navigation principale">
-                <a href="index.html" aria-current="page">Accueil</a>
-                <a href="a-propos.html">À propos</a>
-                <a href="parcours.html">Parcours</a>
-                <a href="projets.html">Projets</a>
-                <a href="journal.html">Journal</a>
-            </nav>
-            <div class="nav-actions">
-                <a class="language-pill" href="../index.html" hreflang="en" lang="en">EN</a>
-                <a class="button button-small" href="#contact">Me contacter</a>
+            <div class="nav-collapsible">
+                <nav class="main-nav" aria-label="Navigation principale">
+                    <a href="index.html" aria-current="page">Accueil</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="parcours.html">Parcours</a>
+                    <a href="projets.html">Projets</a>
+                    <a href="journal.html">Journal</a>
+                </nav>
+                <div class="nav-actions">
+                    <a class="language-pill" href="../index.html" hreflang="en" lang="en">EN</a>
+                    <a class="button button-small" href="#contact">Me contacter</a>
+                </div>
+            </div>
+            <div class="header-toggles">
+                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme"></button>
+                <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </header>
@@ -139,7 +146,7 @@
             <div class="container hero-grid hero-grid--with-photo">
                 <div class="hero-copy reveal">
                     <p class="eyebrow">Site personnel · Portfolio · Journal</p>
-                    <h1>Nada Iddouch, entre e-commerce, SEO, performance digitale et automatisation par l’intelligence artificielle.</h1>
+                    <h1>Nada Iddouch, <span class="role-rotator" data-roles='["passionnée d’e-commerce.","stratège SEO.","créatrice d’automatisations IA.","guidée par la data."]'><span class="role-text"></span></span></h1>
                     <p class="lead">Je pilote la croissance e-commerce avec une approche à la fois stratégique et opérationnelle. J’aime améliorer ce qui existe déjà, structurer ce qui manque, faire parler les données et automatiser intelligemment ce qui peut l’être, en particulier lorsqu’il s’agit de créer des agents capables de détecter des insights utiles à partir de la data accumulée au fil du temps.</p>
                     <p class="lead editorial-note">Au quotidien, je travaille à la croisée du contenu, de l’acquisition, de l’analyse de performance, de l’UX, du SEO et de la coordination de projets. Ce que je recherche avant tout, ce sont des résultats concrets, des idées applicables et des leviers capables de faire progresser un site de façon durable face à une concurrence toujours plus exigeante.</p>
                     <div class="hero-actions">
@@ -149,7 +156,7 @@
                 </div>
                 <aside class="hero-visual reveal" aria-label="Photo de Nada Iddouch">
                     <div class="profile-photo-shell">
-                        <img src="../assets/img/nada-photo.jpg" alt="Portrait de Nada Iddouch" loading="lazy">
+                        <img src="../assets/img/nada-photo.jpg" alt="Portrait de Nada Iddouch" loading="lazy" onerror="this.parentElement.classList.add('photo-fallback'); this.remove();">
                     </div>
                 </aside>
             </div>
@@ -159,11 +166,11 @@
             <div class="container">
                 <p class="eyebrow">Repères</p>
                 <h2>Quelques résultats qui résument ma manière de travailler.</h2>
-                <div class="home-highlights">
-                    <article class="highlight-card"><strong>355k€ → 540k€</strong><span>Chiffre d’affaires e-commerce après refonte du site.</span></article>
-                    <article class="highlight-card"><strong>+52%</strong><span>Croissance du chiffre d’affaires sur trois ans.</span></article>
-                    <article class="highlight-card"><strong>500%+</strong><span>ROAS sur les campagnes Google Ads Search et Shopping.</span></article>
-                    <article class="highlight-card"><strong>-65%</strong><span>Réduction des coûts de production de contenu grâce à l’IA.</span></article>
+                <div class="stat-grid">
+                    <article class="stat-card reveal"><span class="stat-number">540k€</span><span class="stat-label">Chiffre d’affaires e-commerce, contre 355k€ avant la refonte.</span></article>
+                    <article class="stat-card reveal"><span class="stat-number" data-counter="52" data-prefix="+" data-suffix="%">0%</span><span class="stat-label">Croissance du chiffre d’affaires sur trois ans.</span></article>
+                    <article class="stat-card reveal"><span class="stat-number" data-counter="500" data-suffix="%+">0%</span><span class="stat-label">ROAS sur les campagnes Google Ads Search et Shopping.</span></article>
+                    <article class="stat-card reveal"><span class="stat-number" data-counter="65" data-prefix="-" data-suffix="%">0%</span><span class="stat-label">Réduction des coûts de production de contenu grâce à l’IA.</span></article>
                 </div>
             </div>
         </section>

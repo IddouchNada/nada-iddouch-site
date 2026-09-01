@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Career · Nada Iddouch</title>
     <meta name="description" content="Experience, skills, trajectory and professional achievements of Nada Iddouch in e-commerce, SEO, digital performance and automation.">
-    <link rel="canonical" href="https://your-domain.example/career.html">
-    <link rel="alternate" hreflang="en" href="https://your-domain.example/career.html">
-    <link rel="alternate" hreflang="fr" href="https://your-domain.example/fr/parcours.html">
-    <link rel="alternate" hreflang="x-default" href="https://your-domain.example/career.html">
+    <link rel="canonical" href="https://iddouchnada.github.io/nada-iddouch-site/career.html">
+    <link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/career.html">
+    <link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/parcours.html">
+    <link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/career.html">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Nada Iddouch">
     <meta property="og:title" content="Career · Nada Iddouch">
     <meta property="og:description" content="Experience, skills, trajectory and professional achievements of Nada Iddouch.">
-    <meta property="og:url" content="https://your-domain.example/career.html">
+    <meta property="og:url" content="https://iddouchnada.github.io/nada-iddouch-site/career.html">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <div class="scroll-progress"></div>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <div class="container nav-shell">
@@ -28,16 +29,22 @@
                 <span class="brand-mark">NI</span>
                 <span>Nada Iddouch</span>
             </a>
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="career.html" aria-current="page">Career</a>
-                <a href="projects.html">Projects</a>
-                <a href="journal.html">Journal</a>
-            </nav>
-            <div class="nav-actions">
-                <a class="language-pill" href="fr/parcours.html" hreflang="fr" lang="fr">FR</a>
-                <a class="button button-small" href="#contact">Contact me</a>
+            <div class="nav-collapsible">
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="career.html" aria-current="page">Career</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="journal.html">Journal</a>
+                </nav>
+                <div class="nav-actions">
+                    <a class="language-pill" href="fr/parcours.html" hreflang="fr" lang="fr">FR</a>
+                    <a class="button button-small" href="#contact">Contact me</a>
+                </div>
+            </div>
+            <div class="header-toggles">
+                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme"></button>
+                <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </header>
@@ -47,6 +54,11 @@
                 <p class="eyebrow">Career</p>
                 <h1>Experience, skills and trajectory built around performance.</h1>
                 <p class="lead">This page presents my professional path as a coherent progression across management, digital, e-commerce, project leadership and automation, with a constant focus on measurable business impact.</p>
+                <div class="stat-grid">
+                    <article class="stat-card reveal"><span class="stat-number" data-counter="5" data-suffix="+">0</span><span class="stat-label">Years leading e-commerce & digital performance.</span></article>
+                    <article class="stat-card reveal"><span class="stat-number">€540k</span><span class="stat-label">Revenue after the PrestaShop redesign.</span></article>
+                    <article class="stat-card reveal"><span class="stat-number" data-counter="52" data-prefix="+" data-suffix="%">0%</span><span class="stat-label">Revenue growth over three years.</span></article>
+                </div>
             </div>
         </section>
 
@@ -65,7 +77,7 @@
                 <article class="feature-card">
                     <span>03</span>
                     <h3>Next direction</h3>
-                    <p>I want to keep growing through digital transformation, intelligent automation and cross-functional projects with strong business value [cite:23].</p>
+                    <p>I want to keep growing through digital transformation, intelligent automation and cross-functional projects with strong business value.</p>
                 </article>
             </div>
         </section>
@@ -75,29 +87,38 @@
                 <div>
                     <p class="eyebrow">Timeline</p>
                     <h2>Professional path</h2>
-                    <p>Each step of my career has expanded my scope, from management fundamentals to digital performance and cross-functional project ownership [cite:17][cite:30].</p>
+                    <p>Each step of my career has expanded my scope, from management fundamentals to digital performance and cross-functional project ownership.</p>
+                    <div class="filter-chips" data-filter-group=".timeline li">
+                        <button type="button" class="filter-chip active" data-filter="all">All</button>
+                        <button type="button" class="filter-chip" data-filter="work">Experience</button>
+                        <button type="button" class="filter-chip" data-filter="education">Education</button>
+                    </div>
                 </div>
 
                 <ol class="timeline">
-                    <li>
+                    <li data-type="work">
+                        <span class="timeline-type">Experience</span>
                         <time>2021 – Today</time>
                         <h3>E-commerce & Digital Performance Manager · HD Soudage</h3>
                         <p>I lead the e-commerce development of an industrial B2B business, with direct responsibility for commercial performance, organic visibility, acquisition and continuous improvement of the user experience. I led the PrestaShop redesign, helped grow revenue from €355k to €540k, structured performance tracking through GA4, Search Console and Looker Studio, and developed automation initiatives to improve productivity, task reliability and data use.</p>
                     </li>
 
-                    <li>
+                    <li data-type="work">
+                        <span class="timeline-type">Experience</span>
                         <time>2018 – 2019</time>
                         <h3>Apprenticeship – Digital Project & IT Financial Control · Lyreco</h3>
                         <p>This experience gave me a strong foundation in management, reporting and financial monitoring for digital projects. I worked between finance, IT and business teams, with hands-on exposure to budgets, CAPEX/OPEX tracking, financial data structuring and transformation logic in an international environment.</p>
                     </li>
 
-                    <li>
+                    <li data-type="education">
+                        <span class="timeline-type">Education</span>
                         <time>2019 – 2021</time>
                         <h3>Master’s Degree in International Management & Marketing · ULCO</h3>
                         <p>This program strengthened my understanding of business, marketing and international environments, while reinforcing an approach built on analysis, positioning and project development.</p>
                     </li>
 
-                    <li>
+                    <li data-type="education">
+                        <span class="timeline-type">Education</span>
                         <time>2015 – 2019</time>
                         <h3>Bachelor’s Degree in Management · IAE Valenciennes & University of Economics in Katowice</h3>
                         <p>This academic path, combined with an Erasmus exchange, gave me the foundations of management, analysis, organization and adaptability in structured professional environments.</p>
