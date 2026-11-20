@@ -66,8 +66,8 @@
             <div class="article-inner">
                 <span class="tag">Journal · Event</span>
                 <h1>My day at FePSeM Day in Lille</h1>
-                <p class="article-lead">Today I’m at FePSeM Day in Lille, a day dedicated to search marketing. Here’s why I’m going, the questions I’m bringing with me and what I’m already taking away from the morning.</p>
-                <p class="article-meta">By Nada Iddouch · <time datetime="2026-11-20">20 November 2026</time> · 7 min read</p>
+                <p class="article-lead">Today I’m at FePSeM Day in Lille, a day dedicated to search marketing. Here’s why I’m going, the questions I’m bringing with me and what I took away from the day.</p>
+                <p class="article-meta">By Nada Iddouch · <time datetime="2026-11-20">20 November 2026</time> · 10 min read</p>
 
                 <section class="takeaways" aria-labelledby="points">
                     <h2 id="points">Key takeaways</h2>
@@ -75,7 +75,9 @@
                         <li>FePSeM Day brings search marketing professionals together in Lille around SEO, SEA, GEO, AI and e-commerce.</li>
                         <li>I’m going to test my self-taught practice against other professionals’ experience.</li>
                         <li>My big questions right now: showing up in AI answers, e-commerce SEO and the right metrics to track.</li>
-                        <li>The morning was a reminder of the basics: before an AI can cite a site, it has to be able to crawl it, and a CDN, Cloudflare or a WAF can block AI bots without you knowing.</li>
+                        <li>Before an AI can cite a site, it has to be able to crawl it: you don’t block “ChatGPT”, you choose which AI bots to let in based on your goal.</li>
+                        <li>Cloudflare, a CDN or a WAF can block AI bots, or rewrite your <code>robots.txt</code>, without you knowing.</li>
+                        <li>In ChatGPT’s product carousels, 84.4% of purchase links lead to a product page, according to NOIISE’s tracking.</li>
                         <li>On the programme: GEO, controlling the content AI uses, AI and MCP, and what Leroy Merlin and La Redoute are preparing for 2027.</li>
                     </ul>
                 </section>
@@ -114,39 +116,86 @@
                     <p>Over time I’ve picked up a few habits. I don’t try to write everything down: I only keep the ideas I can test in the weeks that follow. A conference is only worth it to me if it turns into action.</p>
                     <p>I also pay as much attention to the breaks as to the talks. That’s often where the most useful exchanges happen: a remark by the coffee machine, a story shared without slides, a new person to follow.</p>
 
-                    <h2>What I took away: the morning</h2>
-                    <p>The morning was really interesting, because it went back to where everything starts: <strong>crawling</strong>. There’s a lot of talk about GEO and visibility in AI answers, but before content can be cited, it first has to be readable. If a bot can’t access a page, that page simply doesn’t exist for it.</p>
+                    <h2>What I took away</h2>
+                    <p>As usual, I didn’t write everything down: I kept what I can actually apply. Here is, session by session, what struck me most.</p>
 
-                    <h3>Allowing (or not) AI bots</h3>
-                    <p>We looked at why it matters to decide clearly which AI bots you let crawl your site. Each company has its own bots, with their own names, and they don’t all do the same job: some collect content to train models, others fetch information in real time to answer a question.</p>
-                    <p>Knowing those names (for example GPTBot or OAI-SearchBot at OpenAI, ClaudeBot at Anthropic, PerplexityBot, or Google-Extended on Google’s side) lets you make informed choices in your <code>robots.txt</code>, rather than blocking or opening everything by default.</p>
+                    <h3>AI bots: you don’t block “ChatGPT”</h3>
+                    <p class="speaker">Philippe Yonnet · Neper</p>
+                    <p>This session went back to where everything starts: <strong>crawling</strong>. There’s a lot of talk about GEO, but before an AI can cite your content, it first has to be able to read it. If a bot can’t access a page, that page doesn’t exist for it.</p>
+                    <p>One line stuck with me: <em>“You don’t block ChatGPT, you block one of OpenAI’s bots.”</em> Each company runs several bots, and each one has a specific job:</p>
+                    <ul>
+                        <li><strong>Training</strong> (<code>GPTBot</code>, <code>ClaudeBot</code>, <code>Meta-ExternalAgent</code>): collects the web to train future models. Blocked, your content leaves the next datasets.</li>
+                        <li><strong>AI search</strong> (<code>OAI-SearchBot</code>, <code>Claude-SearchBot</code>, <code>PerplexityBot</code>): indexes the web so the assistant can cite sources. Blocked, you disappear from answers and citations.</li>
+                        <li><strong>Search engine + AI</strong> (<code>Googlebot</code>, <code>Bingbot</code>, <code>Applebot</code>): a classic search index, reused by its AI. Blocked, you also lose organic search.</li>
+                        <li><strong>On demand</strong> (<code>ChatGPT-User</code>, <code>Claude-User</code>, <code>Perplexity-User</code>): fetches a page when a user asks. Blocked, the assistant can no longer read the page.</li>
+                        <li><strong>Agent</strong> (<code>Google-Agent</code>, <code>Meta-ExternalFetcher</code>): browses and acts on sites on the user’s behalf. Blocked, delegated tasks fail on your site.</li>
+                        <li><strong>Control token</strong> (<code>Google-Extended</code>, <code>Applebot-Extended</code>): crawls nothing, but governs how already-collected data is used. Blocked, you opt out of training, with no effect on search.</li>
+                    </ul>
+                    <p>The per-company detail was very telling. At OpenAI, <code>ChatGPT-User</code> may ignore <code>robots.txt</code>, and a fourth bot, <code>OAI-AdsBot</code>, only visits ad landing pages. At Anthropic, all three bots respect <code>robots.txt</code>, even on demand, and the old names <code>Claude-Web</code> and <code>anthropic-ai</code> are obsolete: blocking them no longer does anything.</p>
+
+                    <h3>Block or allow: it depends on your goal</h3>
+                    <p>There is no single right setting. It all depends on what you expect from AI:</p>
+                    <div class="table-wrap">
+                        <table class="wide">
+                            <thead><tr><th scope="col">Your goal</th><th scope="col">Training</th><th scope="col">Tokens</th><th scope="col">AI search</th><th scope="col">On demand</th><th scope="col">Agents</th></tr></thead>
+                            <tbody>
+                            <tr><th scope="row">Maximum visibility</th><td>Allow</td><td>Allow</td><td>Allow</td><td>Allow</td><td>Allow</td></tr>
+                            <tr><th scope="row">Cited, not plundered</th><td>Block</td><td>Block</td><td>Allow</td><td>Allow</td><td>Allow</td></tr>
+                            <tr><th scope="row">Transactional site</th><td>Your call</td><td>Your call</td><td>Allow</td><td>Allow</td><td>Allow</td></tr>
+                            <tr><th scope="row">Paid or licensed content</th><td>Block</td><td>Block</td><td>Block*</td><td>Block</td><td>Block</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="table-note">Matrix shown during the session. * Unless there is a licensing agreement.</p>
+
+                    <h3>Bing separates training and grounding</h3>
+                    <p>Another important piece of news: at Bing, <code>NoArchive</code> and <code>NoCache</code> are becoming obsolete as AI preferences. Bing now distinguishes two things: <strong>training</strong> (set in <code>robots.txt</code> or page by page, allowed by default) and <strong>grounding</strong>, meaning using a page to generate an answer (set page by page only, through a meta tag or the <code>X-Robots-Tag</code> header).</p>
+                    <p>The announced timeline: temporary preferences in Bing Webmaster Tools from 15 December 2026, new preferences read as pages are crawled from 1 February 2027, then, on 1 March 2027, <code>NoArchive</code> and <code>NoCache</code> will no longer count as AI preferences: grounding will be allowed by default.</p>
 
                     <h3>The blocking you don’t see: CDN, Cloudflare and WAF</h3>
-                    <p>This is the point that struck me most. You can have a perfectly configured <code>robots.txt</code> and still block AI bots without knowing it. The cause is often upstream of the site:</p>
+                    <p>This is the point that struck me most. You can have a carefully thought-out <code>robots.txt</code> and still block AI bots without knowing it.</p>
+                    <p>A concrete example with Cloudflare: when you connect a domain, it suggests recommended AI settings (allow search, block agents on pages with ads, disallow training) and an option, <em>Bot Preference Sync</em>, that adds its own directives at the top of your <code>robots.txt</code>. In other words, Cloudflare can change your <code>robots.txt</code> on the fly:</p>
+                    <pre><code># BEGIN Cloudflare Bot Preference Sync
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Disallow: /
+# END Cloudflare Bot Preference Sync
+
+User-agent: *
+Disallow: /wp-admin/</code></pre>
+
+                    <p>And that’s not the only possible block: the <strong>CDN</strong> can filter some bots before they ever reach the site, and the <strong>WAF</strong> (web application firewall) can mistake a legitimate bot for a threat. The result: SEO thinks the door is open, while the infrastructure has shut it. It’s something you fix with the technical teams, not on your own.</p>
+
+                    <h3>AI: the new battleground for e-merchants</h3>
+                    <p class="speaker">David Groult and Even Hochart · NOIISE</p>
+                    <p>A very hands-on session that put two ideas side by side: <strong>GEO</strong> (getting a brand into AI answers, with reasons the customer understands) and <strong>GEA</strong> (buying a sponsored presence in those answers). The figures, from their October 2026 tracking, taught me a lot: in ChatGPT’s product carousels, 84.4% of purchase links lead to a product page, and an AI can recommend a brand without ever citing its website.</p>
+                    <p>There was so much in it that I wrote a separate article: <a href="geo-and-seo.html">GEO, explained: what changes for SEO and what you can do right now</a>.</p>
+
+                    <h3>Three baskets for AI at work</h3>
+                    <p class="speaker">Patrick Valibus · 410 Gone</p>
+                    <p>A simple framework for deciding what to hand over to AI, which I find useful well beyond search:</p>
                     <ul>
-                        <li><strong>The CDN</strong>, which sits between the visitor and the server, can filter some bots before they ever reach the site.</li>
-                        <li><strong>Cloudflare</strong>, which is very widely used, offers options to block AI bots, and they can be switched on without anyone realising.</li>
-                        <li><strong>The WAF</strong> (web application firewall), there to protect the site, can mistake a legitimate bot for a threat and block it.</li>
+                        <li><strong>Red basket, AI alone:</strong> logging leads in the CRM, writing meeting notes, planning next steps, spotting what’s stalling, keeping tasks and reporting up to date.</li>
+                        <li><strong>Orange basket, AI prepares and a human validates:</strong> drafting follow-ups, preparing a meeting, pricing a proposal, forecasting the quarter.</li>
+                        <li><strong>Green basket, 100% human:</strong> the meeting itself, the negotiation, the decision to send, the relationship.</li>
                     </ul>
-                    <p>The result: SEO thinks the door is open, while the infrastructure has shut it. It’s exactly the kind of issue you don’t fix alone, but with the technical teams.</p>
+                    <p>And a line I’m keeping: <em>“What a human always forgets shouldn’t depend on a human.”</em></p>
 
                     <h3>What I’m going to do</h3>
-                    <p>Back home, I want to check three simple things on the sites I work on: what the <code>robots.txt</code> says about AI bots, the CDN and firewall settings, and the server logs to see which bots actually come through. That’s exactly the kind of idea I like to bring back from a conference: concrete and testable straight away.</p>
+                    <p>Back home, I want to check on the sites I work on: which AI bots the <code>robots.txt</code> really allows, type by type; the Cloudflare, CDN and firewall settings, especially any automatic <code>robots.txt</code> sync; that price, stock, specs and reviews actually appear in the HTML served, without JavaScript; and the server logs, to see which bots really come through. Exactly the kind of ideas I like to bring back from a conference: concrete and testable straight away.</p>
 
-                    <!-- ===== APRÈS-MIDI : à compléter avec les notes de Nada, puis décommenter =====
-                    <h2>The afternoon</h2>
-
-                    <h3 id="ia-mcp">“Built-in AI: how far can you go with AI and MCP?”</h3>
-                    <p class="speaker">Christophe Vidal and Patrick Valibus</p>
-                    <p>[NOTES : ia-mcp]</p>
-
+                    <!-- ===== ROUND TABLE: fill in with Nada’s notes, then uncomment =====
                     <h3 id="table-ronde">Round table “AI and e-commerce: what major retailers are preparing for 2027”</h3>
-                    <p class="speaker">Hélène Soudant (SEO project lead, Leroy Merlin) and Elise Angot Levin (Traffic Manager Northern Europe, La Redoute)</p>
-                    <p>[NOTES : table-ronde]</p>
+                    <p class="speaker">Hélène Soudant (Leroy Merlin) and Elise Angot Levin (La Redoute)</p>
+                    <p>[NOTES: round table]</p>
                     -->
 
                     <h2>What’s next</h2>
-                    <p>I’ll update this article with what I take away from the afternoon, especially on AI and MCP and on what major retailers are preparing for 2027.</p>
+                    <p>To go further on GEO, how it connects to SEO and what you can actually do, read <a href="geo-and-seo.html">my dedicated article</a>.</p>
                     <p>And if you’re at FePSeM Day today too, come and say hello or message me on LinkedIn. I’ve always found the best ideas come out of conversations.</p>
                 </div>
 
