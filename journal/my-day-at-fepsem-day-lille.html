@@ -66,8 +66,8 @@
             <div class="article-inner">
                 <span class="tag">Journal · Event</span>
                 <h1>My day at FePSeM Day in Lille</h1>
-                <p class="article-lead">Today I’m at FePSeM Day in Lille, a day dedicated to search marketing. Here’s why I’m going and the questions I’m bringing with me.</p>
-                <p class="article-meta">By Nada Iddouch · <time datetime="2026-11-20">20 November 2026</time> · 5 min read</p>
+                <p class="article-lead">Today I’m at FePSeM Day in Lille, a day dedicated to search marketing. Here’s why I’m going, the questions I’m bringing with me and what I’m already taking away from the morning.</p>
+                <p class="article-meta">By Nada Iddouch · <time datetime="2026-11-20">20 November 2026</time> · 7 min read</p>
 
                 <section class="takeaways" aria-labelledby="points">
                     <h2 id="points">Key takeaways</h2>
@@ -75,6 +75,7 @@
                         <li>FePSeM Day brings search marketing professionals together in Lille around SEO, SEA, GEO, AI and e-commerce.</li>
                         <li>I’m going to test my self-taught practice against other professionals’ experience.</li>
                         <li>My big questions right now: showing up in AI answers, e-commerce SEO and the right metrics to track.</li>
+                        <li>The morning was a reminder of the basics: before an AI can cite a site, it has to be able to crawl it, and a CDN, Cloudflare or a WAF can block AI bots without you knowing.</li>
                         <li>On the programme: GEO, controlling the content AI uses, AI and MCP, and what Leroy Merlin and La Redoute are preparing for 2027.</li>
                     </ul>
                 </section>
@@ -113,27 +114,27 @@
                     <p>Over time I’ve picked up a few habits. I don’t try to write everything down: I only keep the ideas I can test in the weeks that follow. A conference is only worth it to me if it turns into action.</p>
                     <p>I also pay as much attention to the breaks as to the talks. That’s often where the most useful exchanges happen: a remark by the coffee machine, a story shared without slides, a new person to follow.</p>
 
-                    <!-- ===== NOTES DE LA JOURNÉE : à compléter avec les notes de Nada =====
-                         Décommenter ce bloc une fois rempli. Une sous-partie par session ;
-                         supprimer celles sans notes. -->
-                    <!--
-                    <h2>What I took away</h2>
+                    <h2>What I took away: the morning</h2>
+                    <p>The morning was really interesting, because it went back to where everything starts: <strong>crawling</strong>. There’s a lot of talk about GEO and visibility in AI answers, but before content can be cited, it first has to be readable. If a bot can’t access a page, that page simply doesn’t exist for it.</p>
 
-                    <h3 id="ouverture">Opening keynote</h3>
-                    <p class="speaker">Patrick Valibus</p>
-                    <p>[NOTES : ouverture]</p>
+                    <h3>Allowing (or not) AI bots</h3>
+                    <p>We looked at why it matters to decide clearly which AI bots you let crawl your site. Each company has its own bots, with their own names, and they don’t all do the same job: some collect content to train models, others fetch information in real time to answer a question.</p>
+                    <p>Knowing those names (for example GPTBot or OAI-SearchBot at OpenAI, ClaudeBot at Anthropic, PerplexityBot, or Google-Extended on Google’s side) lets you make informed choices in your <code>robots.txt</code>, rather than blocking or opening everything by default.</p>
 
-                    <h3 id="geo-seo">“Is GEO only the SEO team’s job?”</h3>
-                    <p class="speaker">Mouad Boulaabi (Smartkeyword)</p>
-                    <p>[NOTES : geo-seo]</p>
+                    <h3>The blocking you don’t see: CDN, Cloudflare and WAF</h3>
+                    <p>This is the point that struck me most. You can have a perfectly configured <code>robots.txt</code> and still block AI bots without knowing it. The cause is often upstream of the site:</p>
+                    <ul>
+                        <li><strong>The CDN</strong>, which sits between the visitor and the server, can filter some bots before they ever reach the site.</li>
+                        <li><strong>Cloudflare</strong>, which is very widely used, offers options to block AI bots, and they can be switched on without anyone realising.</li>
+                        <li><strong>The WAF</strong> (web application firewall), there to protect the site, can mistake a legitimate bot for a threat and block it.</li>
+                    </ul>
+                    <p>The result: SEO thinks the door is open, while the infrastructure has shut it. It’s exactly the kind of issue you don’t fix alone, but with the technical teams.</p>
 
-                    <h3 id="contenus-ia">“How can you control the content AI systems use?”</h3>
-                    <p class="speaker">Philippe Yonnet (Neper)</p>
-                    <p>[NOTES : contenus-ia]</p>
+                    <h3>What I’m going to do</h3>
+                    <p>Back home, I want to check three simple things on the sites I work on: what the <code>robots.txt</code> says about AI bots, the CDN and firewall settings, and the server logs to see which bots actually come through. That’s exactly the kind of idea I like to bring back from a conference: concrete and testable straight away.</p>
 
-                    <h3 id="ecommerce-ia">“AI: the new battleground for e-merchants”</h3>
-                    <p class="speaker">David Groult (Head of SEO, NOIISE) and Even Hochart (Head of Ads, NOIISE)</p>
-                    <p>[NOTES : ecommerce-ia]</p>
+                    <!-- ===== APRÈS-MIDI : à compléter avec les notes de Nada, puis décommenter =====
+                    <h2>The afternoon</h2>
 
                     <h3 id="ia-mcp">“Built-in AI: how far can you go with AI and MCP?”</h3>
                     <p class="speaker">Christophe Vidal and Patrick Valibus</p>
@@ -145,7 +146,7 @@
                     -->
 
                     <h2>What’s next</h2>
-                    <p>I’ll soon update this article with what I take away from each session: the ideas that stuck, the ones I’m going to test, and maybe the ones I disagree with.</p>
+                    <p>I’ll update this article with what I take away from the afternoon, especially on AI and MCP and on what major retailers are preparing for 2027.</p>
                     <p>And if you’re at FePSeM Day today too, come and say hello or message me on LinkedIn. I’ve always found the best ideas come out of conversations.</p>
                 </div>
 
