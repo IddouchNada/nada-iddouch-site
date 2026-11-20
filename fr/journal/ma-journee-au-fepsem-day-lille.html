@@ -66,8 +66,8 @@
             <div class="article-inner">
                 <span class="tag">Journal · Événement</span>
                 <h1>Ma journée au FePSeM Day à Lille</h1>
-                <p class="article-lead">Aujourd’hui, je suis au FePSeM Day à Lille, une journée dédiée au search marketing. Je vous raconte pourquoi j’y vais, les questions que j’emporte avec moi et ce que je retiens déjà de la matinée.</p>
-                <p class="article-meta">Par Nada Iddouch · <time datetime="2026-11-20">20 novembre 2026</time> · 7 min de lecture</p>
+                <p class="article-lead">Aujourd’hui, je suis au FePSeM Day à Lille, une journée dédiée au search marketing. Je vous raconte pourquoi j’y vais, les questions que j’emporte avec moi et ce que je retiens de la journée.</p>
+                <p class="article-meta">Par Nada Iddouch · <time datetime="2026-11-20">20 novembre 2026</time> · 10 min de lecture</p>
 
                 <section class="takeaways" aria-labelledby="points">
                     <h2 id="points">Points à retenir</h2>
@@ -75,7 +75,9 @@
                         <li>Le FePSeM Day réunit à Lille les professionnels du search marketing autour du SEO, du SEA, du GEO, de l’IA et de l’e-commerce.</li>
                         <li>J’y vais pour confronter ma pratique, apprise en autodidacte, à celle d’autres professionnels.</li>
                         <li>Mes grandes questions du moment : exister dans les réponses des IA, le SEO e-commerce et les bons indicateurs à suivre.</li>
-                        <li>La matinée a rappelé l’essentiel : avant d’être cité par une IA, un site doit pouvoir être crawlé, et un CDN, Cloudflare ou un WAF peuvent bloquer les robots d’IA sans qu’on le sache.</li>
+                        <li>Avant d’être cité par une IA, un site doit pouvoir être crawlé : on ne bloque pas « ChatGPT », on choisit quels robots d’IA laisser passer selon son objectif.</li>
+                        <li>Cloudflare, un CDN ou un WAF peuvent bloquer les robots d’IA, ou réécrire le <code>robots.txt</code>, sans qu’on le sache.</li>
+                        <li>Dans les carrousels produits de ChatGPT, 84,4 % des liens d’achat mènent à une fiche produit, d’après les relevés de NOIISE.</li>
                         <li>Au programme : le GEO, la maîtrise des contenus exploités par les IA, l’IA et MCP, et ce que préparent Leroy Merlin et La Redoute pour 2027.</li>
                     </ul>
                 </section>
@@ -114,39 +116,86 @@
                     <p>Avec le temps, j’ai pris quelques habitudes. Je ne cherche pas à tout noter : je garde seulement les idées que je peux tester dans les semaines qui suivent. Une conférence n’a de valeur pour moi que si elle se transforme en action.</p>
                     <p>Je fais aussi attention aux pauses, autant qu’aux talks. C’est souvent là que les échanges les plus utiles ont lieu : une remarque à la machine à café, un retour d’expérience partagé sans slides, une nouvelle personne à suivre.</p>
 
-                    <h2>Ce que j’en retiens : la matinée</h2>
-                    <p>La matinée a été très intéressante, parce qu’elle est revenue à la base de tout : <strong>le crawl</strong>. On parle beaucoup de GEO et de visibilité dans les réponses des IA, mais avant d’être cité, un contenu doit d’abord pouvoir être lu. Si un robot ne peut pas accéder à une page, elle n’existe tout simplement pas pour lui.</p>
+                    <h2>Ce que j’en retiens</h2>
+                    <p>Fidèle à mon habitude, je n’ai pas tout noté : j’ai gardé ce que je peux appliquer. Voici, session par session, ce qui m’a le plus marquée.</p>
 
-                    <h3>Autoriser (ou non) les robots des IA</h3>
-                    <p>Nous avons vu l’importance de décider clairement quels robots d’IA on laisse explorer son site. Chaque acteur a ses propres robots, avec leurs propres noms, et ils n’ont pas tous le même rôle : certains collectent des contenus pour entraîner des modèles, d’autres vont chercher l’information en temps réel pour répondre à une question.</p>
-                    <p>Connaître ces noms (par exemple GPTBot ou OAI-SearchBot chez OpenAI, ClaudeBot chez Anthropic, PerplexityBot, ou Google-Extended côté Google) permet de faire des choix éclairés dans son <code>robots.txt</code>, plutôt que de tout bloquer ou tout ouvrir par défaut.</p>
+                    <h3>Les robots des IA : on ne bloque pas « ChatGPT »</h3>
+                    <p class="speaker">Philippe Yonnet · Neper</p>
+                    <p>Cette session est revenue à la base de tout : <strong>le crawl</strong>. On parle beaucoup de GEO, mais avant d’être cité par une IA, un contenu doit d’abord pouvoir être lu. Si un robot ne peut pas accéder à une page, elle n’existe pas pour lui.</p>
+                    <p>Une phrase m’est restée : <em>« On ne bloque pas ChatGPT, on bloque l’un des bots d’OpenAI. »</em> Chaque acteur utilise plusieurs robots, et chacun a un rôle bien précis :</p>
+                    <ul>
+                        <li><strong>Entraînement</strong> (<code>GPTBot</code>, <code>ClaudeBot</code>, <code>Meta-ExternalAgent</code>) : collecte le web pour entraîner les futurs modèles. Bloqué, vos contenus sortent des prochains jeux de données.</li>
+                        <li><strong>Recherche IA</strong> (<code>OAI-SearchBot</code>, <code>Claude-SearchBot</code>, <code>PerplexityBot</code>) : indexe le web pour que l’assistant cite des sources. Bloqué, vous disparaissez des réponses et des citations.</li>
+                        <li><strong>Moteur + IA</strong> (<code>Googlebot</code>, <code>Bingbot</code>, <code>Applebot</code>) : l’index d’un moteur classique, réutilisé par ses IA. Bloqué, vous perdez aussi le référencement naturel.</li>
+                        <li><strong>À la demande</strong> (<code>ChatGPT-User</code>, <code>Claude-User</code>, <code>Perplexity-User</code>) : va chercher une page quand un utilisateur le demande. Bloqué, l’assistant ne lit plus la page.</li>
+                        <li><strong>Agent</strong> (<code>Google-Agent</code>, <code>Meta-ExternalFetcher</code>) : navigue et agit sur les sites à la place de l’utilisateur. Bloqué, les tâches déléguées échouent chez vous.</li>
+                        <li><strong>Jeton de contrôle</strong> (<code>Google-Extended</code>, <code>Applebot-Extended</code>) : ne crawle rien, mais règle l’usage des données déjà collectées. Bloqué, vous refusez l’entraînement, sans effet sur la recherche.</li>
+                    </ul>
+                    <p>Le détail par éditeur était très parlant. Chez OpenAI, <code>ChatGPT-User</code> peut ignorer le <code>robots.txt</code>, et un quatrième robot, <code>OAI-AdsBot</code>, ne visite que les pages d’atterrissage des annonces. Chez Anthropic, les trois robots respectent le <code>robots.txt</code>, même à la demande, et les anciens noms <code>Claude-Web</code> et <code>anthropic-ai</code> sont obsolètes : les bloquer ne sert plus à rien.</p>
+
+                    <h3>Bloquer ou autoriser : une question d’objectif</h3>
+                    <p>Il n’y a pas de bon réglage universel. Tout dépend de ce que l’on attend des IA :</p>
+                    <div class="table-wrap">
+                        <table class="wide">
+                            <thead><tr><th scope="col">Votre objectif</th><th scope="col">Entraînement</th><th scope="col">Jetons</th><th scope="col">Recherche IA</th><th scope="col">À la demande</th><th scope="col">Agents</th></tr></thead>
+                            <tbody>
+                            <tr><th scope="row">Visibilité maximale</th><td>Autoriser</td><td>Autoriser</td><td>Autoriser</td><td>Autoriser</td><td>Autoriser</td></tr>
+                            <tr><th scope="row">Cité, mais pas pillé</th><td>Bloquer</td><td>Bloquer</td><td>Autoriser</td><td>Autoriser</td><td>Autoriser</td></tr>
+                            <tr><th scope="row">Site transactionnel</th><td>Au choix</td><td>Au choix</td><td>Autoriser</td><td>Autoriser</td><td>Autoriser</td></tr>
+                            <tr><th scope="row">Contenu payant ou sous licence</th><td>Bloquer</td><td>Bloquer</td><td>Bloquer*</td><td>Bloquer</td><td>Bloquer</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="table-note">Matrice présentée pendant la session. * Sauf accord de licence.</p>
+
+                    <h3>Bing sépare l’entraînement et le grounding</h3>
+                    <p>Autre actualité importante : chez Bing, <code>NoArchive</code> et <code>NoCache</code> deviennent obsolètes comme préférences IA. Bing distingue désormais deux choses : l’<strong>entraînement</strong> (réglable dans le <code>robots.txt</code> ou page par page, autorisé par défaut) et le <strong>grounding</strong>, c’est-à-dire l’usage d’une page pour générer une réponse (réglable uniquement page par page, via une balise meta ou l’en-tête <code>X-Robots-Tag</code>).</p>
+                    <p>Le calendrier annoncé : préférences temporaires dans Bing Webmaster Tools à partir du 15 décembre 2026, nouvelles préférences lues au fil du crawl à partir du 1<sup>er</sup> février 2027, puis, au 1<sup>er</sup> mars 2027, <code>NoArchive</code> et <code>NoCache</code> ne vaudront plus préférence IA : le grounding sera autorisé par défaut.</p>
 
                     <h3>Le blocage qu’on ne voit pas : CDN, Cloudflare et WAF</h3>
-                    <p>C’est le point qui m’a le plus marquée. On peut avoir un <code>robots.txt</code> parfaitement configuré et, malgré tout, bloquer les robots d’IA sans le savoir. La raison se trouve souvent en amont du site :</p>
+                    <p>C’est le point qui m’a le plus marquée. On peut avoir un <code>robots.txt</code> parfaitement réfléchi et, malgré tout, bloquer les robots d’IA sans le savoir.</p>
+                    <p>Exemple concret avec Cloudflare : au moment de connecter un domaine, l’outil propose des réglages IA recommandés (autoriser la recherche, bloquer les agents sur les pages avec publicité, refuser l’entraînement) et une option, <em>Bot Preference Sync</em>, qui ajoute ses propres directives en tête de votre <code>robots.txt</code>. Autrement dit, Cloudflare peut modifier votre <code>robots.txt</code> à la volée :</p>
+                    <pre><code># BEGIN Cloudflare Bot Preference Sync
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Disallow: /
+# END Cloudflare Bot Preference Sync
+
+User-agent: *
+Disallow: /wp-admin/</code></pre>
+
+                    <p>Et ce n’est pas le seul point de blocage possible : le <strong>CDN</strong> peut filtrer certains robots avant même qu’ils n’atteignent le site, et le <strong>WAF</strong> (pare-feu applicatif) peut prendre un robot légitime pour une menace. Résultat : le SEO pense avoir ouvert la porte, alors que l’infrastructure l’a fermée. C’est un sujet qui se règle avec les équipes techniques, pas seul dans son coin.</p>
+
+                    <h3>IA : le nouveau champ de bataille des e-commerçants</h3>
+                    <p class="speaker">David Groult et Even Hochart · NOIISE</p>
+                    <p>Une session très concrète, qui a posé deux notions côte à côte : le <strong>GEO</strong> (faire entrer la marque dans les réponses des IA, avec des raisons que le client comprend) et le <strong>GEA</strong> (acheter une présence sponsorisée dans ces réponses). Les chiffres présentés, issus de leurs relevés d’octobre 2026, m’ont beaucoup appris : dans les carrousels produits de ChatGPT, 84,4 % des liens d’achat mènent à une fiche produit, et une IA peut recommander une marque sans jamais citer son site.</p>
+                    <p>Il y avait tellement de matière que j’en ai fait un article à part : <a href="geo-et-seo.html">Le GEO, expliqué : ce qui change pour le SEO et ce qu’on peut faire dès maintenant</a>.</p>
+
+                    <h3>Trois paniers pour l’IA au travail</h3>
+                    <p class="speaker">Patrick Valibus · 410 Gone</p>
+                    <p>Un cadre simple pour décider de ce qu’on confie à l’IA, que je trouve très utile au-delà du search :</p>
                     <ul>
-                        <li><strong>Le CDN</strong>, qui se place entre le visiteur et le serveur, peut filtrer certains robots avant même qu’ils n’atteignent le site.</li>
-                        <li><strong>Cloudflare</strong>, très répandu, propose des options de blocage des robots d’IA, qui peuvent être actives sans qu’on en ait conscience.</li>
-                        <li><strong>Le WAF</strong> (pare-feu applicatif), chargé de protéger le site, peut prendre un robot légitime pour une menace et le bloquer.</li>
+                        <li><strong>Panier rouge, l’IA seule :</strong> saisir les leads dans le CRM, rédiger les comptes rendus, planifier les prochaines actions, repérer ce qui traîne, tenir les tâches et le reporting.</li>
+                        <li><strong>Panier orange, l’IA prépare et l’humain valide :</strong> écrire les relances en brouillon, préparer un rendez-vous, chiffrer une proposition, prévoir le chiffre du trimestre.</li>
+                        <li><strong>Panier vert, 100 % humain :</strong> le rendez-vous, la négociation, la décision d’envoyer, la relation.</li>
                     </ul>
-                    <p>Résultat : le SEO pense avoir ouvert la porte, alors que l’infrastructure l’a fermée. C’est typiquement le genre de sujet qui ne se règle pas seul, mais avec les équipes techniques.</p>
+                    <p>Et une phrase que je garde : <em>« Ce qu’un humain oublie toujours ne doit pas dépendre d’un humain. »</em></p>
 
                     <h3>Ce que je vais faire</h3>
-                    <p>En rentrant, je veux vérifier sur les sites sur lesquels je travaille trois choses simples : ce que dit le <code>robots.txt</code> sur les robots d’IA, les réglages côté CDN et pare-feu, et les logs serveur pour voir quels robots passent réellement. C’est exactement le type d’idée que j’aime ramener d’une conférence : concrète et testable tout de suite.</p>
+                    <p>En rentrant, je veux vérifier sur les sites sur lesquels je travaille : quels robots d’IA le <code>robots.txt</code> autorise réellement, type par type ; les réglages Cloudflare, CDN et pare-feu, en particulier une éventuelle synchronisation automatique du <code>robots.txt</code> ; que le prix, le stock, les caractéristiques et les avis apparaissent bien dans le HTML servi, sans JavaScript ; et les logs serveur, pour voir quels robots passent vraiment. Exactement le type d’idées que j’aime ramener d’une conférence : concrètes et testables tout de suite.</p>
 
-                    <!-- ===== APRÈS-MIDI : à compléter avec les notes de Nada, puis décommenter =====
-                    <h2>L’après-midi</h2>
-
-                    <h3 id="ia-mcp">« IA intégrée : jusqu’où aller avec l’IA et MCP ? »</h3>
-                    <p class="speaker">Christophe Vidal et Patrick Valibus</p>
-                    <p>[NOTES : ia-mcp]</p>
-
+                    <!-- ===== TABLE RONDE : à compléter avec les notes de Nada, puis décommenter =====
                     <h3 id="table-ronde">Table ronde « IA et e-commerce, ce que les grandes enseignes préparent pour 2027 »</h3>
-                    <p class="speaker">Hélène Soudant (SEO project lead, Leroy Merlin) et Elise Angot Levin (Traffic Manager Northern Europe, La Redoute)</p>
+                    <p class="speaker">Hélène Soudant (Leroy Merlin) et Elise Angot Levin (La Redoute)</p>
                     <p>[NOTES : table-ronde]</p>
                     -->
 
                     <h2>La suite</h2>
-                    <p>Je compléterai cet article avec ce que je retiens de l’après-midi, notamment sur l’IA et MCP et sur ce que les grandes enseignes préparent pour 2027.</p>
+                    <p>Pour aller plus loin sur le GEO, ses liens avec le SEO et les actions possibles, je vous invite à lire <a href="geo-et-seo.html">mon article dédié</a>.</p>
                     <p>Et si vous êtes aussi au FePSeM Day aujourd’hui, n’hésitez pas à venir me dire bonjour ou à m’écrire sur LinkedIn. J’ai toujours trouvé que les meilleures idées naissent des conversations.</p>
                 </div>
 
