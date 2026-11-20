@@ -121,4 +121,16 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal/mesurer-son-seo.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal/measuring-your-seo.html" />
   </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/journal/my-day-at-fepsem-day-lille.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/journal/my-day-at-fepsem-day-lille.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal/ma-journee-au-fepsem-day-lille.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal/my-day-at-fepsem-day-lille.html" />
+  </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/fr/journal/ma-journee-au-fepsem-day-lille.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/journal/my-day-at-fepsem-day-lille.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal/ma-journee-au-fepsem-day-lille.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal/my-day-at-fepsem-day-lille.html" />
+  </url>
 </urlset>
