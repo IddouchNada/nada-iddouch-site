@@ -225,6 +225,7 @@ h3 { font-size: clamp(1.3125rem, 2.2vw, 1.75rem); font-weight: 500; line-height:
 /* Journal */
 .feature-wrap { padding-bottom: clamp(48px, 8vw, 96px); }
 .feature { display: block; padding: 24px 22px 22px; background: var(--gold); color: var(--ink); text-decoration: none; }
+.feature + .feature { margin-top: 16px; }
 .feature:hover { background: #d6bd90; color: var(--ink); }
 .feature .tag { display: block; margin-bottom: 32px; color: #2b2519; }
 .feature h2 { max-width: 20ch; font-size: clamp(2rem, 5vw, 3.75rem); font-weight: 500; line-height: 1.06; letter-spacing: -.02em; }
