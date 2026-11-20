@@ -248,6 +248,7 @@ h3 { font-size: clamp(1.3125rem, 2.2vw, 1.75rem); font-weight: 500; line-height:
 .article-body p { margin-top: 16px; font-size: 1.125rem; line-height: 1.7; color: #d4d2cc; }
 .article-body h3 { margin-top: 32px; font-size: clamp(1.15rem, 2.2vw, 1.35rem); font-weight: 500; line-height: 1.25; }
 .article-body p.speaker { margin-top: 6px; font-family: "IBM Plex Mono", monospace; font-size: .8125rem; letter-spacing: .04em; color: var(--gold); }
+.article-body code { font-family: "IBM Plex Mono", monospace; font-size: .9em; padding: 1px 5px; border: 1px solid var(--line); border-radius: 3px; }
 .article-end { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); }
 
 .article-body ul { margin-top: 16px; }

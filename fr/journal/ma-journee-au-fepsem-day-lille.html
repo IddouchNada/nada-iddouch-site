@@ -66,8 +66,8 @@
             <div class="article-inner">
                 <span class="tag">Journal · Événement</span>
                 <h1>Ma journée au FePSeM Day à Lille</h1>
-                <p class="article-lead">Aujourd’hui, je suis au FePSeM Day à Lille, une journée dédiée au search marketing. Je vous raconte pourquoi j’y vais et les questions que j’emporte avec moi.</p>
-                <p class="article-meta">Par Nada Iddouch · <time datetime="2026-11-20">20 novembre 2026</time> · 5 min de lecture</p>
+                <p class="article-lead">Aujourd’hui, je suis au FePSeM Day à Lille, une journée dédiée au search marketing. Je vous raconte pourquoi j’y vais, les questions que j’emporte avec moi et ce que je retiens déjà de la matinée.</p>
+                <p class="article-meta">Par Nada Iddouch · <time datetime="2026-11-20">20 novembre 2026</time> · 7 min de lecture</p>
 
                 <section class="takeaways" aria-labelledby="points">
                     <h2 id="points">Points à retenir</h2>
@@ -75,6 +75,7 @@
                         <li>Le FePSeM Day réunit à Lille les professionnels du search marketing autour du SEO, du SEA, du GEO, de l’IA et de l’e-commerce.</li>
                         <li>J’y vais pour confronter ma pratique, apprise en autodidacte, à celle d’autres professionnels.</li>
                         <li>Mes grandes questions du moment : exister dans les réponses des IA, le SEO e-commerce et les bons indicateurs à suivre.</li>
+                        <li>La matinée a rappelé l’essentiel : avant d’être cité par une IA, un site doit pouvoir être crawlé, et un CDN, Cloudflare ou un WAF peuvent bloquer les robots d’IA sans qu’on le sache.</li>
                         <li>Au programme : le GEO, la maîtrise des contenus exploités par les IA, l’IA et MCP, et ce que préparent Leroy Merlin et La Redoute pour 2027.</li>
                     </ul>
                 </section>
@@ -113,27 +114,27 @@
                     <p>Avec le temps, j’ai pris quelques habitudes. Je ne cherche pas à tout noter : je garde seulement les idées que je peux tester dans les semaines qui suivent. Une conférence n’a de valeur pour moi que si elle se transforme en action.</p>
                     <p>Je fais aussi attention aux pauses, autant qu’aux talks. C’est souvent là que les échanges les plus utiles ont lieu : une remarque à la machine à café, un retour d’expérience partagé sans slides, une nouvelle personne à suivre.</p>
 
-                    <!-- ===== NOTES DE LA JOURNÉE : à compléter avec les notes de Nada =====
-                         Décommenter ce bloc une fois rempli. Une sous-partie par session ;
-                         supprimer celles sans notes. -->
-                    <!--
-                    <h2>Ce que j’en retiens</h2>
+                    <h2>Ce que j’en retiens : la matinée</h2>
+                    <p>La matinée a été très intéressante, parce qu’elle est revenue à la base de tout : <strong>le crawl</strong>. On parle beaucoup de GEO et de visibilité dans les réponses des IA, mais avant d’être cité, un contenu doit d’abord pouvoir être lu. Si un robot ne peut pas accéder à une page, elle n’existe tout simplement pas pour lui.</p>
 
-                    <h3 id="ouverture">Discours d’ouverture</h3>
-                    <p class="speaker">Patrick Valibus</p>
-                    <p>[NOTES : ouverture]</p>
+                    <h3>Autoriser (ou non) les robots des IA</h3>
+                    <p>Nous avons vu l’importance de décider clairement quels robots d’IA on laisse explorer son site. Chaque acteur a ses propres robots, avec leurs propres noms, et ils n’ont pas tous le même rôle : certains collectent des contenus pour entraîner des modèles, d’autres vont chercher l’information en temps réel pour répondre à une question.</p>
+                    <p>Connaître ces noms (par exemple GPTBot ou OAI-SearchBot chez OpenAI, ClaudeBot chez Anthropic, PerplexityBot, ou Google-Extended côté Google) permet de faire des choix éclairés dans son <code>robots.txt</code>, plutôt que de tout bloquer ou tout ouvrir par défaut.</p>
 
-                    <h3 id="geo-seo">« Le GEO est-il uniquement l’affaire de l’équipe SEO ? »</h3>
-                    <p class="speaker">Mouad Boulaabi (Smartkeyword)</p>
-                    <p>[NOTES : geo-seo]</p>
+                    <h3>Le blocage qu’on ne voit pas : CDN, Cloudflare et WAF</h3>
+                    <p>C’est le point qui m’a le plus marquée. On peut avoir un <code>robots.txt</code> parfaitement configuré et, malgré tout, bloquer les robots d’IA sans le savoir. La raison se trouve souvent en amont du site :</p>
+                    <ul>
+                        <li><strong>Le CDN</strong>, qui se place entre le visiteur et le serveur, peut filtrer certains robots avant même qu’ils n’atteignent le site.</li>
+                        <li><strong>Cloudflare</strong>, très répandu, propose des options de blocage des robots d’IA, qui peuvent être actives sans qu’on en ait conscience.</li>
+                        <li><strong>Le WAF</strong> (pare-feu applicatif), chargé de protéger le site, peut prendre un robot légitime pour une menace et le bloquer.</li>
+                    </ul>
+                    <p>Résultat : le SEO pense avoir ouvert la porte, alors que l’infrastructure l’a fermée. C’est typiquement le genre de sujet qui ne se règle pas seul, mais avec les équipes techniques.</p>
 
-                    <h3 id="contenus-ia">« Comment maîtriser les contenus exploités par les IA ? »</h3>
-                    <p class="speaker">Philippe Yonnet (Neper)</p>
-                    <p>[NOTES : contenus-ia]</p>
+                    <h3>Ce que je vais faire</h3>
+                    <p>En rentrant, je veux vérifier sur les sites sur lesquels je travaille trois choses simples : ce que dit le <code>robots.txt</code> sur les robots d’IA, les réglages côté CDN et pare-feu, et les logs serveur pour voir quels robots passent réellement. C’est exactement le type d’idée que j’aime ramener d’une conférence : concrète et testable tout de suite.</p>
 
-                    <h3 id="ecommerce-ia">« IA : le nouveau champ de bataille des e-commerçants »</h3>
-                    <p class="speaker">David Groult (Head of SEO, NOIISE) et Even Hochart (Head of Ads, NOIISE)</p>
-                    <p>[NOTES : ecommerce-ia]</p>
+                    <!-- ===== APRÈS-MIDI : à compléter avec les notes de Nada, puis décommenter =====
+                    <h2>L’après-midi</h2>
 
                     <h3 id="ia-mcp">« IA intégrée : jusqu’où aller avec l’IA et MCP ? »</h3>
                     <p class="speaker">Christophe Vidal et Patrick Valibus</p>
@@ -145,7 +146,7 @@
                     -->
 
                     <h2>La suite</h2>
-                    <p>Je compléterai très vite cet article avec ce que je retiens de chaque session : les idées qui m’ont marquée, celles que je vais tester, et peut-être celles avec lesquelles je ne suis pas d’accord.</p>
+                    <p>Je compléterai cet article avec ce que je retiens de l’après-midi, notamment sur l’IA et MCP et sur ce que les grandes enseignes préparent pour 2027.</p>
                     <p>Et si vous êtes aussi au FePSeM Day aujourd’hui, n’hésitez pas à venir me dire bonjour ou à m’écrire sur LinkedIn. J’ai toujours trouvé que les meilleures idées naissent des conversations.</p>
                 </div>
 
