@@ -145,4 +145,28 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/journal/geo-et-seo.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/journal/geo-and-seo.html" />
   </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/projects/ecommerce-redesign-without-traffic-loss.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/projects/ecommerce-redesign-without-traffic-loss.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/projets/refonte-site-ecommerce-sans-perte-de-trafic.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/projects/ecommerce-redesign-without-traffic-loss.html" />
+  </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/fr/projets/refonte-site-ecommerce-sans-perte-de-trafic.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/projects/ecommerce-redesign-without-traffic-loss.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/projets/refonte-site-ecommerce-sans-perte-de-trafic.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/projects/ecommerce-redesign-without-traffic-loss.html" />
+  </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/projects/spanish-site-launch-equipossoldadura.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/projects/spanish-site-launch-equipossoldadura.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/projets/creation-site-espagnol-equipossoldadura.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/projects/spanish-site-launch-equipossoldadura.html" />
+  </url>
+  <url>
+    <loc>https://iddouchnada.github.io/nada-iddouch-site/fr/projets/creation-site-espagnol-equipossoldadura.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iddouchnada.github.io/nada-iddouch-site/projects/spanish-site-launch-equipossoldadura.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iddouchnada.github.io/nada-iddouch-site/fr/projets/creation-site-espagnol-equipossoldadura.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iddouchnada.github.io/nada-iddouch-site/projects/spanish-site-launch-equipossoldadura.html" />
+  </url>
 </urlset>
